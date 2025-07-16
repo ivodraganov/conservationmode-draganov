@@ -13,9 +13,6 @@ Battery Conservation Mode is a hardware-supported feature found on many Lenovo l
 - Persistent state stored in applet settings
 - Clean icon and tooltip indicating current status
 
-## 📸 Screenshot
-> *(Add screenshot here if desired)*
-
 ## 🖥️ Requirements
 
 - Lenovo laptop with support for **conservation_mode**
@@ -28,36 +25,49 @@ Battery Conservation Mode is a hardware-supported feature found on many Lenovo l
 1. Clone or download this repository:
    ```bash
    git clone https://github.com/YOUR_USERNAME/conservationmode@draganov.git
-Copy the folder to your Cinnamon applets directory:
-mkdir -p ~/.local/share/cinnamon/applets/
-cp -r conservationmode@draganov ~/.local/share/cinnamon/applets/
-Restart Cinnamon (Alt+F2, type r, then press Enter) or log out and log in again.
-Add the applet to your panel:
-Right-click panel → Add Applets to the Panel
-Look for Battery Conservation Mode and add it.
-🔒 Permissions
+   ```
 
-Make sure pkexec allows your user to write to the required system file. You may need to create a PolicyKit rule.
+2. Copy the folder to your Cinnamon applets directory:
+   ```bash
+   mkdir -p ~/.local/share/cinnamon/applets/
+   cp -r conservationmode@draganov ~/.local/share/cinnamon/applets/
+   ```
+
+3. Restart Cinnamon (`Alt+F2`, type `r`, then press `Enter`) or log out and log in again.
+
+4. Add the applet to your panel:
+   - Right-click panel → `Add Applets to the Panel`
+   - Look for **Battery Conservation Mode** and add it.
+
+## 🔒 Permissions
+
+Make sure `pkexec` allows your user to write to the required system file. You may need to create a PolicyKit rule.
 
 Example (⚠️ Use with caution):
-
+```bash
 sudo nano /etc/polkit-1/rules.d/50-conservationmode.rules
+```
+
+```javascript
 polkit.addRule(function(action, subject) {
     if (action.id == "org.freedesktop.policykit.exec" &&
         subject.isInGroup("your-username")) {
         return polkit.Result.YES;
     }
 });
-🧪 Tested On
+```
 
-Linux Mint 21.3 Cinnamon
-Lenovo Ideapad and ThinkPad laptops
-📜 License
+## 🧪 Tested On
 
-MIT
-Includes usage of particles.js under the MIT license (if used in the UI or visuals).
+- Linux Mint 21.3 Cinnamon
+- Lenovo Ideapad and ThinkPad laptops
 
-🙋 Author
+## 📜 License
 
-Ivo Draganov
-GitHub: @ivodraganov
+MIT  
+Includes usage of [`particles.js`](https://vincentgarreau.com/particles.js/) under the MIT license (if used in the UI or visuals).
+
+## 🙋 Author
+
+**Ivo Draganov**  
+GitHub: [@ivodraganov](https://github.com/ivodraganov)
