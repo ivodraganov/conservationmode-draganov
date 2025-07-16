@@ -60,12 +60,7 @@ polkit.addRule(function(action, subject) {
 ## 🧪 Tested On
 
 - Linux Mint 21.3 Cinnamon
-- Lenovo Ideapad and ThinkPad laptops
-
-## 📜 License
-
-MIT  
-Includes usage of [`particles.js`](https://vincentgarreau.com/particles.js/) under the MIT license (if used in the UI or visuals).
+- Lenovo Ideapad and ThinkPad laptops.
 
 ## 🙋 Author
 
