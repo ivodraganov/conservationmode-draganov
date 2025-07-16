@@ -1,0 +1,8 @@
+{
+  "uuid": "conservationmode@draganov",
+  "name": "Battery Conservation Mode",
+  "description": "Toggle Lenovo battery conservation mode from the panel.",
+  "version": "1.0.0",
+  "max-instances": 1,
+  "multiversion": false
+}
