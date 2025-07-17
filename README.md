@@ -24,7 +24,7 @@ Battery Conservation Mode is a hardware-supported feature found on many Lenovo l
 
 1. Clone or download this repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/conservationmode@draganov.git
+   git clone https://github.com/ivodraganov/conservationmode@draganov.git
    ```
 
 2. Copy the folder to your Cinnamon applets directory:
